@@ -2,8 +2,8 @@
   <img src="https://github.com/kamil1403/otus_LVM-1/blob/main/screenshots/lvm.jpg" alt="RAID Banner" width="800">
 </p>
 
-<h1 align="center">otus_mdadm_RAID</h1>
-<p align="center">Дата: 11-05-2025<br>Автор: Kamil Ibragimov</p>
+<h1 align="center">otus_LVM-1</h1>
+<p align="center">Дата: 15-05-2025<br>Автор: Kamil Ibragimov</p>
 
 ## Домашнее задание: работа с mdadm   
 Задание:   
