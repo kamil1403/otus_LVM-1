@@ -181,29 +181,16 @@ cat /proc/mdstat
 ---
 
 <a id="GPT"></a>
-## ⚙️ Создание разделов на RAID
+## ⚙️ Расширение файловой системы
 
 ```bash
-# Размонтирует RAID
-sudo umount /mnt/raid01 
-# Создаст GPT разметку
-sudo parted -s /dev/md127 mklabel gpt
-# Создаст 5 равных разделов по 20%
-sudo parted /dev/md127 mkpart primary ext4 0% 20%
-sudo parted /dev/md127 mkpart primary ext4 20% 40%
-sudo parted /dev/md127 mkpart primary ext4 40% 60%
-sudo parted /dev/md127 mkpart primary ext4 60% 80%
-sudo parted /dev/md127 mkpart primary ext4 80% 100%
-# Создает файловые системы (ext4)
-for i in $(seq 1 5); do sudo mkfs.ext4 /dev/md127p$i; done
-# Создает точки монтирования
-sudo mkdir -p /raid/part{1,2,3,4,5}
-# Монтирует разделы 
-for i in $(seq 1 5); do mount /dev/md127p$i /raid/part$i; done
-# Редактирует файл fstab для автоматического монтирования разделов при загрузке
-nano /etc/fstab
-# Пример строки для автоматического монтирования разделов
-for i in {1..5}; do echo "/dev/md127p$i /mnt/raid_part$i ext4 defaults 0 2" | sudo tee -a /etc/fstab; done
+# Инициализация нового PV   
+pvcreate /dev/sdc   
+vgextend otus /dev/sdc   
+# Расширение логического тома   
+lvextend -l+80%FREE /dev/otus/test
+# Расширение файловой системы
+resize2fs /dev/otus/test
 ```
 
 ---
