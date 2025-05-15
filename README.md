@@ -252,7 +252,7 @@ mount /dev/md127 /mnt/raid01
 ---
 
 <a id="pvl"></a>
-## ✂️ Основные принципы LVM: создание PV, VG, LV
+## ✂️ Создание Physical Volume, Volume Group и Logical Volume
 
 ```bash
 # LVM (Logical Volume Manager) — это система управления дисками в Linux, позволяющая гибко объединять и перераспределять пространство на физических носителях   
