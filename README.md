@@ -5,7 +5,7 @@
 <h1 align="center">otus_LVM-1</h1>
 <p align="center">Дата: 15-05-2025<br>Автор: Kamil Ibragimov</p>
 
-## Домашнее задание: работа с mdadm   
+## Домашнее задание: работа с LVM
 Задание:   
 • Настроить LVM в Ubuntu 24.04 Server   
 • Создать Physical Volume, Volume Group и Logical Volume   
