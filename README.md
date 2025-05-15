@@ -18,7 +18,7 @@
 • Задание считается выполненым, если проведены все манипуляции с разделами, прописано монтирование в fstab, проведена работа со снепшотами    
 
 Результат:   
-• Cкрипт для создания RAID 1 написан. Результат см. на скриншотах ["create_RAID_1_1"](https://github.com/kamil1403/otus_mdadm_RAID/blob/main/screenshots/create_RAID_1_1.png) и ["create_RAID_1_2"](https://github.com/kamil1403/otus_mdadm_RAID/blob/main/screenshots/create_RAID_1_2.png)   
+• Создал Создать Physical Volume, Volume Group и Logical Volume. Результат см. на скриншотах ["create_lvm"](https://github.com/kamil1403/otus_mdadm_RAID/blob/main/screenshots/create_RAID_1_1.png)  
 • Отчет по командам для починки RAID см. на скриншотах ["fail_RAID_1_1"](https://github.com/kamil1403/otus_mdadm_RAID/blob/main/screenshots/fail_RAID_1_1.png) и ["fail_RAID_1_2"](https://github.com/kamil1403/otus_mdadm_RAID/blob/main/screenshots/fail_RAID_1_2.png)   
 • Отчет по командам для создания GPT разделов на RAID см. на скриншотах ["GPT_RAID_1_1"](https://github.com/kamil1403/otus_mdadm_RAID/blob/main/screenshots/GPT_RAID_1_1.png), ["GPT_RAID_1_2"](https://github.com/kamil1403/otus_mdadm_RAID/blob/main/screenshots/GPT_RAID_1_2.png) и ["GPT_RAID_1_3"](https://github.com/kamil1403/otus_mdadm_RAID/blob/main/screenshots/GPT_RAID_1_3.png)   
 
