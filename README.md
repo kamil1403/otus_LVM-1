@@ -258,11 +258,23 @@ mount /dev/md127 /mnt/raid01
 # LVM (Logical Volume Manager) — это система управления дисками в Linux, позволяющая гибко объединять и перераспределять пространство на физических носителях   
 # LVM использует три уровня:
 # 1. PV (Physical Volume) — это "сырой" диск или раздел, подготовленный под использование в LVM   
-pvcreate /dev/sdb1
+pvcreate /dev/sdb
 # 2. VG (Volume Group) — это контейнер, в который объединяются один или несколько PV   
-vgcreate my_vg /dev/sdb1
+vgcreate otus /dev/sdb1
 # 3. LV — это "кусок" из группы VG, который работает как обычный раздел, только гибче   
-lvcreate -L 10G -n my_lv my_vg
+lvcreate -L 10G -n test otus
+# Создание логического тома на 80% от доступного места   
+lvcreate -l+80%FREE -n test otus   
+# Просмотр и управление LVM   
+# Подробно:  
+pvdispaly 
+vgdisplay   
+lvdisplay   
+# Кратко:   
+pvs   
+vgs   
+lvs   
+
 ```
 
 ---
