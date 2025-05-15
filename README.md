@@ -217,7 +217,7 @@ mount /dev/otus/test /lvm
 # 1. PV (Physical Volume) — это "сырой" диск или раздел, подготовленный под использование в LVM   
 pvcreate /dev/sdb
 # 2. VG (Volume Group) — это контейнер, в который объединяются один или несколько PV   
-vgcreate otus /dev/sdb1
+vgcreate otus /dev/sdb
 # 3. LV — это "кусок" из группы VG, который работает как обычный раздел, только гибче   
 lvcreate -L 10G -n test otus
 # Создание логического тома на 80% от доступного места   
