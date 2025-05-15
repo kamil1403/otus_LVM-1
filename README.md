@@ -265,6 +265,8 @@ vgcreate otus /dev/sdb1
 lvcreate -L 10G -n test otus
 # Создание логического тома на 80% от доступного места   
 lvcreate -l+80%FREE -n test otus   
+# Удаление логического тома   
+lvremove /dev/otus/test   
 # Просмотр и управление LVM   
 # Подробно:  
 pvdispaly 
