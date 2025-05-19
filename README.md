@@ -94,13 +94,16 @@ resize2fs /dev/otus/test
 ## ✂️ Уменьшение файловой системы
 
 ```bash
-# Инициализация нового PV   
-pvcreate /dev/sdc   
-vgextend otus /dev/sdc   
-# Расширение логического тома   
-lvextend -l+80%FREE /dev/otus/test
-# Расширение файловой системы
-resize2fs /dev/otus/test
+# Отключение логического тома   
+umount /lvm   
+# Проверка файловой системы   
+e2fsck -f /dev/otus/test   
+# Уменьшение файловой системы   
+resize2fs /dev/otus/test 4G   
+# Уменьшение логического тома   
+lvreduce -L 4G /dev/otus/test   
+# Монтирование логического тома
+mount /dev/otus/test /lvm
 ```
 
 ---
