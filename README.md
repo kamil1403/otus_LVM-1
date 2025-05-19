@@ -126,10 +126,13 @@ mount /dev/otus/otus_snap /snapshot
 rm -rf /lvm/* 
 # Размонтирование логического тома
 umount /lvm
+umount /snapshot
 # Деактирование тома
 lvchange -an /dev/otus/test
 # Восстановление файлов из snapshot
 lvconvert --merge /dev/otus/otus_snap
+# Активирование тома
+lvchange -ay /dev/otus/test
 # Монтирование логического тома
 mount /dev/otus/test /lvm
 ```
