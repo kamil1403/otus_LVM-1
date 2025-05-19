@@ -90,7 +90,7 @@ resize2fs /dev/otus/test
 
 ---
 
-<a id="resize_max"></a>
+<a id="resize_min"></a>
 ## ✂️ Уменьшение файловой системы
 
 ```bash
